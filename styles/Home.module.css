@@ -7,25 +7,10 @@
   padding: 4rem 0;
   flex: 1;
   display: flex;
+  margin: 0 auto;
+  width: 500px;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+  /* justify-content: center; */
 }
 
 .title a {
@@ -47,7 +32,7 @@
 
 .title,
 .description {
-  text-align: center;
+  text-align: left;
 }
 
 .description {
@@ -113,4 +98,14 @@
     width: 100%;
     flex-direction: column;
   }
+}
+
+.button {
+  background-color: teal;
+  border-radius: 10px;
+  padding: 13px 15px;
+  color: white;
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
 }
