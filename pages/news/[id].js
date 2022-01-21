@@ -2,5 +2,13 @@ import { useRouter } from "next/router";
 
 export default function index() {
   const router = useRouter();
-  return <div>this is news dynamic page for {router.query.id}</div>;
+  const goToMain = () => {
+    router.push("/news");
+  };
+  return (
+    <div>
+      <h3>this is news dynamic page for {router.query.id}</h3>
+      <button onClick={goToMain}>go to main news</button>
+    </div>
+  );
 }
