@@ -1,0 +1,15 @@
+.box {
+  background-color: teal;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px 0px;
+  color: white;
+}
+
+.title {
+  font-size: 2em;
+  margin: 0px;
+}
+.paragraph {
+  font-size: 1.1em;
+}

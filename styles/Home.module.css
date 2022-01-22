@@ -7,7 +7,7 @@
   padding: 4rem 0;
   flex: 1;
   display: flex;
-  margin: 0 auto;
+  margin: 0px auto;
   width: 500px;
   flex-direction: column;
   /* justify-content: center; */
@@ -108,4 +108,5 @@
   width: 200px;
   text-align: center;
   cursor: pointer;
+  margin-bottom: 20px;
 }

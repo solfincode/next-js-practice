@@ -11,5 +11,7 @@ learning next js from basic to advanced skill for myself
 - using getStaticProps function, i get fetched from json placedholder api and display title on home page and using next/link module, i make navigate link from home to news page back and forth
 
 #### 4. useContext and provider hooks
-- using useContext and createHooks, i created on single source of state management within app root in the next js
+- using useContext and createHooks, i created on single source of state management within 
+app root in the next js
 
+#### 5. exercise for file-based routing in next js 
