@@ -15,12 +15,7 @@ export default function Home({ data }) {
 
       <main className={styles.main}>
         <h3>this is data fetched from json placeholder api site</h3>
-        <Link href="/news">
-          <div className={styles.button}>goto news page</div>
-        </Link>
-        <Link href="/events">
-          <div className={styles.button}>goto events page</div>
-        </Link>
+
         {data.map((el) => {
           return <Card title={el.title} key={el.id} styles={styles} />;
         })}
