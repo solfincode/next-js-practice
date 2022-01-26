@@ -1,12 +1,15 @@
 import { useModule } from "../../contexts/module";
 //event list component
 import EventList from "../../components/EventList";
+import EventSearch from "../../components/EventSearch";
 
 export default function index() {
-  const { data } = useModule();
+  const { dataState, searchHandle } = useModule();
+
   return (
     <div style={{ margin: "0 auto", width: "600px" }}>
-      {data.map((event) => (
+      <EventSearch searchHandle={searchHandle} />
+      {dataState.map((event) => (
         <EventList
           key={event.id}
           id={event.id}
