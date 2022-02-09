@@ -3,9 +3,11 @@ import { useModule } from "../../contexts/module";
 import EventDeatails from "../../components/EventDetails";
 
 export default function EventDetailsPage() {
-  const { data } = useModule();
+  const { dataState } = useModule();
   const router = useRouter();
-  const sortedDetails = data.filter((event) => event.id == router.query.id);
+  const sortedDetails = dataState.filter(
+    (event) => event.id == router.query.id
+  );
 
   return (
     <div style={{ margin: "0 auto", width: "600px" }}>

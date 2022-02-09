@@ -1,6 +1,9 @@
+import axios from "axios";
+import { useState } from "react";
 import { useRouter } from "next/router";
 
-export default function index() {
+export default function index({ data }) {
+  const [state, setState] = useState(data);
   const router = useRouter();
   const goToMain = () => {
     router.push("/news");

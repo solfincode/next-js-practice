@@ -15,25 +15,31 @@ export default function Home({ data }) {
 
       <main className={styles.main}>
         <h3>this is data fetched from json placeholder api site</h3>
-
-        {data.map((el) => {
-          return <Card title={el.title} key={el.id} styles={styles} />;
-        })}
+        {typeof data == "string" ? (
+          <div>{data}</div>
+        ) : (
+          data.map((el) => {
+            return <Card title={el.title} key={el.id} styles={styles} />;
+          })
+        )}
       </main>
     </div>
   );
 }
 
 export async function getStaticProps() {
-  const res = await axios.get("https://jsonplaceholder.typicode.com/todos");
-  const element = await res.data;
-
-  if (!element) {
-    return { notFound: true };
+  console.log("re");
+  try {
+    const res = await axios.get("https://jsonplaceholder.typicode.com/todos");
+    const element = await res.data;
+    return {
+      props: {
+        data: element,
+      },
+      revalidate: 10,
+    };
+  } catch (err) {
+    console.log(err);
+    return { props: { data: "error on api" } };
   }
-  return {
-    props: {
-      data: element,
-    },
-  };
 }
