@@ -28,7 +28,6 @@ export default function Home({ data }) {
 }
 
 export async function getStaticProps() {
-  console.log("re");
   try {
     const res = await axios.get("https://jsonplaceholder.typicode.com/todos");
     const element = await res.data;
