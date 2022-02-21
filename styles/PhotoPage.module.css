@@ -1,0 +1,14 @@
+.container {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.photoContainer {
+  display: flex;
+  flex-direction: row nowrap;
+  margin-bottom: 20px;
+}
+
+.photoContainer img {
+  margin-right: 20px;
+}
