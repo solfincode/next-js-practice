@@ -16,7 +16,7 @@ const photoPage = () => {
       })
       .catch((err) => console.log(err));
   }, []);
-  console.log(data);
+
   if (isLoading) return <div className={styles.container}>loading...</div>;
   return (
     <div className={styles.container}>
